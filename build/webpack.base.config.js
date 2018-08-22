@@ -1,13 +1,15 @@
-const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src/index.js'),
-  devtool: 'source-map',
+  entry: {
+    app: path.resolve(__dirname, '../src/index.js')
+  },
+  devtool: 'cheap-module-source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'my-app.js',
-    library: 'my-app',
+    filename: '[name].js',
+    library: '[name]',
     libraryTarget: 'umd',
     libraryExport: 'default'
   },
@@ -41,5 +43,10 @@ module.exports = {
       { test: /\.(jpg|png|gif|svg|tiff)$/, use: 'file-loader' },
       { test: /\.(woff|woff2|eot|ttf|otf)$/, use: 'file-loader'}
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../index.html')
+    })
+  ]
 };
