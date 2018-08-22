@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["env", "airbnb"]
+  ],
+  "plugins": [
+    "transform-runtime"
+  ],
+  "env": {
+    "test": {
+      "presets": ["env", "airbnb"]
+    }
+  }
+}
