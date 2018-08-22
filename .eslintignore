@@ -1,2 +1,3 @@
 build/*.js
+dist/*.js
 postcss.config.js

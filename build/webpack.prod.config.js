@@ -10,8 +10,14 @@ module.exports = merge(base, {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    new UglifyJSPlugin({
-      sourceMap: true
-    }),
-  ]
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new UglifyJSPlugin({
+        sourceMap: true,
+        include: /\.min\.js$/,
+      }),
+    ]
+  }
 });

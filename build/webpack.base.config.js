@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
 module.exports = {
-  mode: 'development',
   entry: {
-    app: path.resolve(__dirname, '../src/index.js')
+    'app': path.resolve(__dirname, '../src/index.js'),
+    'app.min': path.resolve(__dirname, '../src/index.js')
   },
   devtool: 'cheap-module-source-map',
   output: {
@@ -25,8 +25,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'eslint-loader',
-        enforce: 'pre' //to check source files, not modified by other loaders (like babel-loader)
+        loader: 'eslint-loader',
+        enforce: 'pre', //to check source files, not modified by other loaders (like babel-loader)
+        options: {
+          formatter: require('eslint-formatter-friendly')
+        }
       },{
         test: /\.js$/,
         exclude: /node_modules/,
@@ -48,7 +51,8 @@ module.exports = {
   plugins: [
     new WebpackBar(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../index.html')
+      template: path.resolve(__dirname, '../index.html'),
+      favicon: path.resolve(__dirname, '../src/assets/favicon.png')
     })
   ]
 };
