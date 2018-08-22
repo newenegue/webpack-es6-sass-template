@@ -1,7 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackBar = require('webpackbar');
 
 module.exports = {
+  mode: 'development',
   entry: {
     app: path.resolve(__dirname, '../src/index.js')
   },
@@ -14,13 +16,12 @@ module.exports = {
     libraryExport: 'default'
   },
   resolve: {
-    extensions: ['.js'],
     alias: {
       '@': path.join(__dirname, '../src')
     }
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -45,6 +46,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new WebpackBar(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../index.html')
     })

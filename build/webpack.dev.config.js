@@ -7,7 +7,7 @@ module.exports = merge(base, {
   devServer: {
     contentBase: base.output.path,
     compress: true,
-    port: 3000,
+    port: 8080,
     hot: true
   },
   plugins: [

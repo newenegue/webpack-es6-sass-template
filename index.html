@@ -8,25 +8,25 @@
 <body>
 <div id="app"></div>
 
-<!--<script>-->
-  <!--document.addEventListener('DOMContentLoaded', function(){-->
-    <!--var elem = document.getElementById('app');-->
-    <!--let instance = new UserList(elem, [-->
-      <!--{firstname: 'Ross', lastname: 'Geller'},-->
-      <!--{firstname: 'Monica', lastname: 'Geller'},-->
-      <!--{firstname: 'Chandler', lastname: 'Bing'},-->
-      <!--{firstname: 'Joey', lastname: 'Tribbiani'},-->
-    <!--]);-->
-    <!--// initialize-->
-    <!--instance.init();-->
-    <!--// add new users-->
-    <!--setTimeout(function(){-->
-      <!--instance.addUser({firstname: 'Rachel', lastname: 'Green'});-->
-    <!--}, 2000);-->
-    <!--setTimeout(function(){-->
-      <!--instance.addUser({firstname: 'Phoebe', lastname: 'Buffay'});-->
-    <!--}, 4000);-->
-  <!--});-->
-<!--</script>-->
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const elem = document.getElementById('app');
+    let instance = new app(elem, [
+      {firstname: 'Ross', lastname: 'Geller'},
+      {firstname: 'Monica', lastname: 'Geller'},
+      {firstname: 'Chandler', lastname: 'Bing'},
+      {firstname: 'Joey', lastname: 'Tribbiani'},
+    ]);
+    // initialize
+    instance.init();
+    // add new users
+    setTimeout(function(){
+      instance.addUser({firstname: 'Rachel', lastname: 'Green'});
+    }, 2000);
+    setTimeout(function(){
+      instance.addUser({firstname: 'Phoebe', lastname: 'Buffay'});
+    }, 4000);
+  });
+</script>
 </body>
 </html>
