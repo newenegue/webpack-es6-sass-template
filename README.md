@@ -1,5 +1,3 @@
-# [WITHIN](https://www.with.in/)
-
-> WITHIN Unlimited, Inc. Webplayer
+# Webpack, ES6, SASS, Linting
 
 TODO
