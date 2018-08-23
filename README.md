@@ -25,6 +25,8 @@ Build will create a `/dist` directory with the unminified and minified version o
 
 ### Other Commands
 
+Still work in progress...
+
 ``` 
 npm run lint  // checks linting
 npm test      // runs unit tests
