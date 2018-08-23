@@ -1,6 +1,6 @@
 # Webpack ES6 Template
 
-A vanilla Javascript template that uses Webpack. The project will convert ES6 and SASS then minifies the code for production builds. The Airbnb Javascript Style Guide is used for code linting.
+A vanilla Javascript template that uses Webpack. The project will convert ES6 and SASS then minifies the code for production builds. The[Airbnb Javascript Style Guide](https://github.com/airbnb/javascript) is used for code linting.
 
 The development build runs on port `8080` and uses hot module reloading to watch for changes and update the browser automatically.
 
